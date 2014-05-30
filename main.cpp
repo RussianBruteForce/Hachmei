@@ -1,17 +1,20 @@
-#include <QtGui/QApplication>
-#include "hachmeiwindow.h"
-#include "passwd.h"
-#include <QStyle>
-#include <QTextCodec>
+﻿#include "Hachmei.h"
+#include "password.h"
+#include <QApplication>
+
 int main(int argc, char *argv[])
 {
-    QTextCodec *RusCodec = QTextCodec::codecForName("utf-8"); // make codec
-    QTextCodec::setCodecForCStrings(RusCodec); // Installing codec
-    QApplication a(argc, argv);
-    a.setStyle("cleanlooks");
-    QIcon icon = QIcon(":/icon.png");
-    a.setWindowIcon(icon);
-    passwd pwdWindow;
-    pwdWindow.show();
-    return a.exec();
+	QApplication a(argc, argv);
+
+	QIcon icon = QIcon(":/icon.ico");
+	a.setWindowIcon(icon);
+
+	password p;
+	Hachmei h;
+	QObject::connect(&p, &password::rightPassword,
+			 &h, &Hachmei::show);
+	p.show();
+
+
+	return a.exec();
 }

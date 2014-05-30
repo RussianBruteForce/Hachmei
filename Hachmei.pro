@@ -1,26 +1,27 @@
 #-------------------------------------------------
 #
-# Project created by QtCreator 2012-01-20T16:42:09
+# Project created by QtCreator 2014-05-30T16:04:39
 #
 #-------------------------------------------------
 
 QT       += core gui
+CONFIG += c++11
+
+greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
 TARGET = Hachmei
 TEMPLATE = app
 
 
 SOURCES += main.cpp\
-        hachmeiwindow.cpp \
-    passwd.cpp
+        Hachmei.cpp \
+    password.cpp
 
-HEADERS  += hachmeiwindow.h \
-    passwd.h
+HEADERS  += Hachmei.h \
+    password.h
 
-FORMS    += hachmeiwindow.ui \
-    passwd.ui
+FORMS    += Hachmei.ui \
+    password.ui
 
 RESOURCES += \
-    res.qrc
-
-CONFIG += static
+    resources.qrc

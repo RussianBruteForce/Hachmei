@@ -9,12 +9,12 @@ int main(int argc, char *argv[])
 	QIcon icon = QIcon(":/icon.ico");
 	a.setWindowIcon(icon);
 
-	password p;
+	//password p;
 	Hachmei h;
-	QObject::connect(&p, &password::rightPassword,
-			 &h, &Hachmei::show);
-	p.show();
-
+	//QObject::connect(&p, &password::rightPassword,
+	//		 &h, &Hachmei::show);
+	//p.show();
+	h.show();
 
 	return a.exec();
 }

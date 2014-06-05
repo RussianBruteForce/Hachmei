@@ -22,7 +22,7 @@
     <item>
      <widget class="QTabWidget" name="tabs">
       <property name="currentIndex">
-       <number>0</number>
+       <number>1</number>
       </property>
       <widget class="QWidget" name="dataTab">
        <attribute name="title">
@@ -175,8 +175,11 @@
             <height>100</height>
            </size>
           </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: rgb(255, 215, 0);</string>
+          </property>
           <property name="text">
-           <string>Золотое числоs</string>
+           <string>Золотое число</string>
           </property>
           <property name="flat">
            <bool>false</bool>
@@ -228,7 +231,11 @@
          </layout>
         </item>
         <item>
-         <widget class="QTextBrowser" name="resultText"/>
+         <widget class="QTextBrowser" name="resultText">
+          <property name="openExternalLinks">
+           <bool>true</bool>
+          </property>
+         </widget>
         </item>
        </layout>
       </widget>

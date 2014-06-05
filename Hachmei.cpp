@@ -124,13 +124,13 @@ bool Hachmei::checkDate()
 bool Hachmei::checkName()
 {
 	if (
-		!ui->name->text().isEmpty() &&
-		!ui->surname->text().isEmpty() &&
-		!ui->patronymic->text().isEmpty()
+		ui->name->text().isEmpty() ||
+		ui->surname->text().isEmpty() ||
+		ui->patronymic->text().isEmpty()
 	    )
-		return true;
-	else
 		return false;
+	else
+		return true;
 }
 
 int Hachmei::getSumOfNumbers(int num)
@@ -428,7 +428,8 @@ QString Hachmei::getAboutText()
 	return QString::fromLocal8Bit(
 				"Программа написаа для <b>Киселевой Натальи</b> (skype: natali180861)<br>"
 				"Автор Viktor Hackeridze aka <b>BruteForce</b><br>"
-				"e-mail: bruteforce@sigil.tk"
+				"e-mail: bruteforce@sigil.tk<br>"
+				"Site: <a href=\"http://hackeridze.tk\">hackeridze.tk</a>"
 				);
 }
 

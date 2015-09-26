@@ -5,7 +5,7 @@ Astrology-way profession detection.
 
 Windows setup
 =======
-http://adf.ly/omgib
+:C Nothing there
 
 Linux compile guide
 =======
